@@ -6,7 +6,8 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, fil
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-BOT_TOKEN = "YOUR_BOT_TOKEN"
+import os
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # Function to convert Terabox link
 def convert_terabox_link(link: str) -> str:
